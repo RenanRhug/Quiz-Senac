@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="warning">
-    <ion-title>Quiz Senac</ion-title>
+    <ion-title>EstudaQuiz</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-list>
@@ -16,20 +16,24 @@
 ></ion-textarea> -->
   <ion-list>
     <ion-item>
-      <ion-input labelPlacement="stacked" label="Login" placeholder="email@gmail.com">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-input  placeholder="Usuário" >
       </ion-input>
     </ion-item>
   </ion-list>
 
   <ion-list>
     <ion-item>
-      <ion-input type="password" labelPlacement="floating" label="Senha" placeholder="123456789"> 
+      <ion-icon name="lock-open-outline"></ion-icon>
+      <ion-input type="password" placeholder="Senha"> 
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
     </ion-item>
   </ion-list>
   <ion-button color="warning"  (click)="login()">Login</ion-button>
   <ion-button color="warning"  (click)="anonimous()">Anonimo</ion-button>
+  <ion-button color="warning"  (click)="create()">Criar uma conta</ion-button>
+
 </ion-list>
 <ion-button expand="block" (click)="forgotPassword()">Esqueci minha senha</ion-button>
 <ion-content>

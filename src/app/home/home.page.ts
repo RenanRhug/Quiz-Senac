@@ -20,6 +20,9 @@ export class HomePage {
   anonimous(){
     this.router.navigate(['/anonimous']);
   }
+  create(){
+    this.router.navigate(['/create']);
+  }
 }
 
 
