@@ -10,12 +10,12 @@ export class HomePage {
   constructor(private router: Router) {}
 
   login(){
-    this.router.navigate(['/primary'])
+    this.router.navigate(['/login'])
   }
 
   forgotPassword() {
-    this.router.navigate(['/home']);
-  }
+    this.router.navigate(['/forgot']);
+  } 
 
   anonimous(){
     this.router.navigate(['/anonimous']);

@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar color="warning">
-    <ion-title>EstudaQuiz</ion-title>
+  <ion-toolbar >
+    <ion-title color="new">EstudaQuiz</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-list>
@@ -30,12 +30,11 @@
       </ion-input>
     </ion-item>
   </ion-list>
-  <ion-button color="warning"  (click)="login()">Login</ion-button>
-  <ion-button color="warning"  (click)="anonimous()">Anonimo</ion-button>
-  <ion-button color="warning"  (click)="create()">Criar uma conta</ion-button>
-
+  <ion-button color="buttons"  (click)="login()">Login</ion-button>
+  <ion-button color="buttons"  (click)="anonimous()">Anonimo</ion-button>
+  <ion-button color="buttons"  (click)="create()">Criar uma conta</ion-button>
 </ion-list>
-<ion-button expand="block" (click)="forgotPassword()">Esqueci minha senha</ion-button>
+<a href="/forgot">Esqueci a senha</a>
 <ion-content>
 </ion-content>
 <ion-footer> 

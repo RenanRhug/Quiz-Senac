@@ -1,2 +1,37 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+	--ion-color-new: #023047;
+	--ion-color-new-rgb: 2,48,71;
+	--ion-color-new-contrast: #ffffff;
+	--ion-color-new-contrast-rgb: 255,255,255;
+	--ion-color-new-shade: #022a3e;
+	--ion-color-new-tint: #1b4559;
+}
+
+.ion-color-new {
+	--ion-color-base: var(--ion-color-new);
+	--ion-color-base-rgb: var(--ion-color-new-rgb);
+	--ion-color-contrast: var(--ion-color-new-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-new-contrast-rgb);
+	--ion-color-shade: var(--ion-color-new-shade);
+	--ion-color-tint: var(--ion-color-new-tint);
+}
+
+:root {
+	--ion-color-buttons: #4461f2;
+	--ion-color-buttons-rgb: 68,97,242;
+	--ion-color-buttons-contrast: #ffffff;
+	--ion-color-buttons-contrast-rgb: 255,255,255;
+	--ion-color-buttons-shade: #3c55d5;
+	--ion-color-buttons-tint: #5771f3;
+}
+
+.ion-color-buttons {
+	--ion-color-base: var(--ion-color-buttons);
+	--ion-color-base-rgb: var(--ion-color-buttons-rgb);
+	--ion-color-contrast: var(--ion-color-buttons-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-buttons-contrast-rgb);
+	--ion-color-shade: var(--ion-color-buttons-shade);
+	--ion-color-tint: var(--ion-color-buttons-tint);
+}
