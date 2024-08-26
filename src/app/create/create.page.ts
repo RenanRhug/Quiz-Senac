@@ -13,8 +13,13 @@ export class CreatePage implements OnInit {
   }
 
   
+  create() {
+    alert("conta criada com sucesso");
+    setTimeout(() => this.home(), 3000);
+  }
+  home() {
+    this.router.navigate(['/home']);
+  }
   
 }
-function windowBack(){
-  window.history.back();
-}
+
