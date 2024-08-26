@@ -11,7 +11,7 @@ export class Forgot2Page implements OnInit {
 
   ngOnInit() {
   }
-  forgot2(){
-    this.router.navigate(['/forgot2']);
+  reset(){
+    this.router.navigate(['/reset']);
   }
 }
