@@ -6,23 +6,20 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
   constructor(private router: Router) {}
 
-  login(){
-    this.router.navigate(['/login'])
+  login() {
+    this.router.navigate(['/login']);
   }
 
   forgotPassword() {
     this.router.navigate(['/forgot']);
-  } 
+  }
 
-  anonimous(){
+  anonimous() {
     this.router.navigate(['/anonimous']);
   }
-  create(){
+  create() {
     this.router.navigate(['/create']);
   }
 }
-
-

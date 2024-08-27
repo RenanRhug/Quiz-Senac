@@ -6,12 +6,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot2.page.scss'],
 })
 export class Forgot2Page implements OnInit {
-
   constructor(private router: Router) {}
 
-  ngOnInit() {
-  }
-  forgot2(){
-    this.router.navigate(['/forgot2']);
+  ngOnInit() {}
+  reset() {
+    this.router.navigate(['/reset']);
   }
 }
