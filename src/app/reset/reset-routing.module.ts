@@ -6,8 +6,8 @@ import { ResetPage } from './reset.page';
 const routes: Routes = [
   {
     path: '',
-    component: ResetPage
-  }
+    component: ResetPage,
+  },
 ];
 
 @NgModule({

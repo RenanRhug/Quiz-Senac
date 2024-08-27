@@ -6,20 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./create.page.scss'],
 })
 export class CreatePage implements OnInit {
-
   constructor(private router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  
   create() {
-    alert("conta criada com sucesso");
+    alert('conta criada com sucesso');
     setTimeout(() => this.home(), 3000);
   }
   home() {
     this.router.navigate(['/home']);
   }
-  
 }
-

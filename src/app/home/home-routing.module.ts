@@ -9,12 +9,13 @@ const routes: Routes = [
   },
   {
     path: 'reset',
-    loadChildren: () => import('../reset/reset.module').then( m => m.ResetPageModule)
-  }
+    loadChildren: () =>
+      import('../reset/reset.module').then((m) => m.ResetPageModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class HomePageRoutingModule {}

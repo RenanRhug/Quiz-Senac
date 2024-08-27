@@ -9,12 +9,7 @@ import { ResetPageRoutingModule } from './reset-routing.module';
 import { ResetPage } from './reset.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ResetPageRoutingModule
-  ],
-  declarations: [ResetPage]
+  imports: [CommonModule, FormsModule, IonicModule, ResetPageRoutingModule],
+  declarations: [ResetPage],
 })
 export class ResetPageModule {}

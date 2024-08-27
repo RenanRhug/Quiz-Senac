@@ -6,18 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./reset.page.scss'],
 })
 export class ResetPage implements OnInit {
-
   constructor(private router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   sucesso() {
-    alert("sucesso");
+    alert('sucesso');
     setTimeout(() => this.home(), 3000);
   }
-  
+
   home() {
     this.router.navigate(['/home']);
   }
-    
 }
