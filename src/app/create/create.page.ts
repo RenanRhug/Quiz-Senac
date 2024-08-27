@@ -18,7 +18,7 @@ export class CreatePage implements OnInit {
     setTimeout(() => this.home(), 3000);
   }
   home() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/login']);
   }
   
 }

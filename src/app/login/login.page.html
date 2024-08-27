@@ -1,5 +1,34 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>tela principal</ion-title>
+<ion-header>
+  <ion-toolbar >
+    <ion-title color="new">EstudaQuiz</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-list>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-input  placeholder="Usuário" >
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="lock-open-outline"></ion-icon>
+      <ion-input type="password" placeholder="Senha"> 
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button color="buttons"  (click)="login()">Login</ion-button>
+  <ion-button color="buttons"  (click)="anonimous()">Anonimo</ion-button>
+  <ion-button color="buttons"  (click)="create()">Criar uma conta</ion-button>
+</ion-list>
+<a href="/forgot">Esqueci a senha</a>
+<ion-content>
+</ion-content>
+<ion-footer> 
+  <p>Rodapé</p>
+</ion-footer>
