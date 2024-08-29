@@ -1,0 +1,29 @@
+.createOrForgot {
+  display: flex;
+}
+
+.create {
+  color: black;
+  font-weight: 800;
+  font-size: 10px;
+}
+
+.forgot {
+  color: black;
+  font-weight: 800;
+  font-size: 10px;
+}
+
+.buttonsLogin {
+  display: flex;
+  flex-direction: row;
+}
+.login {
+  width: 222px;
+  height: 33.3px;
+  border: 1px solid transparent;
+}
+a {
+  text-decoration: none;
+  // color: black;
+}
