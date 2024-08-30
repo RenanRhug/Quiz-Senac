@@ -1,43 +1,41 @@
-<ion-header>
-  <ion-toolbar >
-    <ion-title color="new">Criar conta</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-header class="ion-no-border header">
+    <ion-toolbar class="toolbarContent">
+      <ion-title color="new">Criar conta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="inputCreate" size="12" size-lg="3">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input placeholder="Usuário"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="inputCreate" size="12" size-lg="3">
+        <ion-icon name="lock-open-outline"></ion-icon>
+        <ion-input type="password" placeholder="Senha">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="inputCreate" size="12" size-lg="3">
+        <ion-icon name="lock-open-outline"></ion-icon>
+        <ion-input type="password" placeholder="Confirme a senha">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="CreateButtonContainer">
+        <ion-buttons>
+          <ion-button class="create" (click)="create()">Entrar</ion-button>
+        </ion-buttons>
 
-  <ion-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col class="inputCreate" size="12" size-lg="3">
-          <ion-icon name="person-circle-outline"></ion-icon>
-          <ion-input placeholder="Usuário"></ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="inputCreate" size="12" size-lg="3">
-          <ion-icon name="lock-open-outline"></ion-icon>
-          <ion-input type="password" placeholder="Senha">
-            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="inputCreate" size="12" size-lg="3">
-          <ion-icon name="lock-open-outline"></ion-icon>
-          <ion-input type="password" placeholder="Confirme a senha">
-            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="CreateButtonContainer">
-          <ion-buttons>
-            <ion-button class="create" (click)="create()">Entrar</ion-button>
-          </ion-buttons>
-  
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-content>
-  
-  <link rel="stylesheet" type="text/css" href="./create.page.scss">
- 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<link rel="stylesheet" type="text/css" href="./create.page.scss">

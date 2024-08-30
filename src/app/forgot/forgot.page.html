@@ -1,29 +1,27 @@
-
-<ion-header >
-  <ion-toolbar >
-    <ion-title color="new">Esqueci a senha</ion-title>
-  </ion-toolbar>
-</ion-header> 
 <ion-content>
-
+  <ion-header class="ion-no-border header">
+    <ion-toolbar class="toolbarContent">
+      <ion-title color="new">Esqueci a senha</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <ion-grid>
     <ion-row>
-        <ion-col class="inputForgot" size="12" size-lg="3">
-          <ion-icon name="person-circle-outline"></ion-icon>
-          <ion-input placeholder="Email para recuperação"></ion-input>
-        </ion-col>
-      </ion-row>
-      
-      
-      <ion-buttons>
-        <ion-col class="ForgoButtonContainer">
-          <ion-button color="background" class="forgot" (click)="forgot2()">Redefinir senha</ion-button>
-        </ion-col>
-      </ion-buttons>
-      
-    </ion-grid>
-    <ion-img src="assets/image.png" >
-    
-    </ion-img>
-  </ion-content>
+      <ion-col class="inputForgot" size="12" size-lg="3">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input placeholder="Email para recuperação"></ion-input>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-buttons>
+      <ion-col class="ForgoButtonContainer">
+        <ion-button color="background" class="forgot" (click)="forgot2()">Redefinir senha</ion-button>
+      </ion-col>
+    </ion-buttons>
+
+  </ion-grid>
+  <ion-img src="assets/image.png">
+
+  </ion-img>
+</ion-content>
 <link rel="stylesheet" href="./forgot.page.scss">

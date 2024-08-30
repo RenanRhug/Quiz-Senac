@@ -1,24 +1,36 @@
-<ion-header>
-  <ion-toolbar >
-    <ion-title color="new">EstudaQuiz</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-list>
-  <ion-item>
-    <ion-title>Quiz - Teste vocacional </ion-title> 
-  </ion-item>
-  <ion-button color="buttons"  (click)="anonimous()">Iniciar quiz</ion-button>
-</ion-list>
-<ion-list>
-  <ion-item>
-    <ion-title>Quiz - Teste de aprendizado </ion-title> 
-  </ion-item>
-  <ion-button color="buttons"  (click)="anonimous()">Iniciar quiz</ion-button>
-</ion-list>
-<ion-list>
-  <ion-item>
-    <ion-title>Quiz - Inglês </ion-title> 
-  </ion-item>
-  <ion-button color="buttons"  (click)="anonimous()">Iniciar quiz</ion-button>
-</ion-list>
-<ion-list>
+<ion-content>
+  <ion-header class="ion-no-border header">
+    <ion-toolbar class="toolbarContent">
+      <ion-title color="new">EstudaQuiz</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-title>Teste vocacional </ion-title>
+        <ion-button color="buttons" (click)="anonimous()">Iniciar quiz</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-title>Teste de aprendizado </ion-title>
+        <ion-button color="buttons" (click)="anonimous()">Iniciar quiz</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-title>Teste de inglês </ion-title>
+        <ion-button color="buttons" (click)="anonimous()">Iniciar quiz</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-title>Teste atumalaca </ion-title>
+        <ion-button color="buttons" (click)="anonimous()">Iniciar quiz</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
