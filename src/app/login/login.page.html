@@ -4,32 +4,43 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-list>
-  <ion-item>
-    <ion-icon name="person-circle-outline"></ion-icon>
-    <ion-input placeholder="Usuário">
-    </ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-icon name="lock-open-outline"></ion-icon>
-    <ion-input type="password" placeholder="Senha">
-      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-    </ion-input>
-  </ion-item>
-
-  <ion-list class="createOrForgot">
-    <ion-button color="background" class="create" (click)="create()">Criar conta</ion-button>
-    <ion-button color="background" class="forgot" href="/forgot">Esqueceu sua senha?</ion-button>
-  </ion-list>
-</ion-list>
-
-<ion-item class="buttonsLogin">
-  <ion-button class="button login" color="buttons" (click)="login()">Entrar</ion-button>
-  <!-- <ion-button color="buttons" (click)="anonimous()">Anonimo</ion-button> -->
-</ion-item>
-
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="inputLogin" size="12" size-lg="3">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input placeholder="Usuário"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="inputLogin" size="12" size-lg="3">
+        <ion-icon name="lock-open-outline"></ion-icon>
+        <ion-input type="password" placeholder="Senha">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-buttons>
+        <ion-col class="createOrForgot">
+          <ion-button color="background" class="create" (click)="create()">Criar conta</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="background" class="forgot" href="/forgot">Esqueceu sua senha?</ion-button>
+        </ion-col>
+      </ion-buttons>
+    </ion-row>
+    <ion-row>
+      <ion-col class="loginButtonContainer">
+        <ion-buttons>
+          <ion-button class="login" (click)="login()">Entrar</ion-button>
+          <!-- <ion-button color="buttons" (click)="anonimous()">Anonimo</ion-button> -->
+        </ion-buttons>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
 <link rel="stylesheet" type="text/css" href="./login.page.scss">
