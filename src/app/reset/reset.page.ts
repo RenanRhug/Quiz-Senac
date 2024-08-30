@@ -13,10 +13,10 @@ export class ResetPage implements OnInit {
   }
   sucesso() {
     alert("sucesso");
-    setTimeout(() => this.home(), 3000);
+    setTimeout(() => this.login(), 3000);
   }
-  
-  home() {
+
+  login() {
     this.router.navigate(['/login']);
   }
     

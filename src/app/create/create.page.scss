@@ -1,0 +1,40 @@
+ion-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: #d7d4d8;
+  }
+
+.create {
+    display: flex;
+    width: 222px;
+    height: 33.3px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #4461f2;
+    font-weight: 600;
+  }
+.inputCreate {
+    display: flex;
+    background-color: #fcf9f3;
+    color: #73777e;
+    text-align: left;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 15px;
+  }
+.CreateButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+ion-content {
+    padding: 1rem;
+    margin: 1rem;
+  }

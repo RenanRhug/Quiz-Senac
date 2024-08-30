@@ -1,22 +1,37 @@
 <ion-header>
   <ion-toolbar >
-    <ion-title color="new">Reset</ion-title>
+    <ion-title color="new">Redefinir senha</ion-title>
   </ion-toolbar>
-  <ion-list>
-    <ion-item>
-      <ion-icon name="lock-open-outline"></ion-icon>
-      <ion-input type="password" placeholder="Senha"> 
-        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-      </ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="lock-open-outline"></ion-icon>
-      <ion-input type="password" placeholder="Confirme sua senha"> 
-        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-      </ion-input>
-    </ion-item>
-  </ion-list>
-  
-  <ion-button color="buttons" (click)="sucesso()">Redefinir senha</ion-button>
-  <ion-button color="buttons"  onclick="history.back()">Voltar</ion-button>
 </ion-header>
+
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="inputReset" size="12" size-lg="3">
+          <ion-icon name="lock-open-outline"></ion-icon>
+          <ion-input type="password" placeholder="Senha">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="inputReset" size="12" size-lg="3">
+          <ion-icon name="lock-open-outline"></ion-icon>
+          <ion-input type="password" placeholder="Confirme a senha">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ResetButtonContainer">
+          <ion-buttons>
+            <ion-button class="reset" (click)="sucesso()">Redefinir senha</ion-button>
+          </ion-buttons>
+  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
+  <link rel="stylesheet" type="text/css" href="./reset.page.scss">
+ 

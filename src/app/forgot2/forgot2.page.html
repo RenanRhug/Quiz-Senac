@@ -1,15 +1,25 @@
-<ion-header>
+<ion-header >
   <ion-toolbar >
-    <ion-title color="new">Confirme o código</ion-title>
+    <ion-title color="new">Esqueci a senha</ion-title>
   </ion-toolbar>
-  <ion-list>
-    <ion-item>
-      <ion-icon name="key-outline"></ion-icon>
-      <ion-input  placeholder="Insira o codigo que enviamos para o seu email">
-      </ion-input>
-    </ion-item>
-    <ion-button color="buttons" (click)="reset()">Enviar</ion-button>
-    <ion-button color="buttons"  onclick="history.back()">Voltar</ion-button>
+</ion-header> 
+<ion-content>
 
-  </ion-list>
-</ion-header>
+  <ion-grid>
+    <ion-row>
+        <ion-col class="inputForgot2" size="12" size-lg="3">
+          <ion-icon name="key-outline"></ion-icon>
+          <ion-input placeholder="codigo de recuperação"></ion-input>
+        </ion-col>
+      </ion-row>
+      
+      
+      <ion-buttons>
+        <ion-col class="Forgot2ButtonContainer">
+          <ion-button color="background" class="forgot" (click)="reset()">Redefinir senha</ion-button>
+        </ion-col>
+      </ion-buttons>
+      
+    </ion-grid>
+  </ion-content>
+<link rel="stylesheet" href="./forgot2.page.scss">

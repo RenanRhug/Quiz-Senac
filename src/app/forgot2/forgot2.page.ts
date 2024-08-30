@@ -14,4 +14,5 @@ export class Forgot2Page implements OnInit {
   reset(){
     this.router.navigate(['/reset']);
   }
+
 }
