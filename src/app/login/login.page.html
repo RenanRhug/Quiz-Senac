@@ -1,10 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title color="new">EstudaQuiz</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button default-href="#"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Back Button</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
 
 <ion-content>
+  <ion-header class="ion-no-border header">
+    <ion-toolbar class="toolbarContent">
+      <ion-title color="new">EstudaQuiz</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <ion-grid>
     <ion-row>
       <ion-col class="inputLogin" size="12" size-lg="3">
@@ -27,7 +35,7 @@
           <ion-button color="background" class="create" (click)="create()">Criar conta</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="background" class="forgot" href="/forgot">Esqueceu sua senha?</ion-button>
+          <ion-button color="background" class="forgot" href="/forgot">Esqueceu a senha?</ion-button>
         </ion-col>
       </ion-buttons>
     </ion-row>
@@ -41,8 +49,8 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-img src="assets/image.png" >
-    
+  <ion-img src="assets/image.png">
+
   </ion-img>
 </ion-content>
 
