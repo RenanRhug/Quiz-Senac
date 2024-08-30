@@ -38,3 +38,12 @@ ion-content {
     padding: 1rem;
     margin: 1rem;
   }
+
+  ion-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: none;
+  }
