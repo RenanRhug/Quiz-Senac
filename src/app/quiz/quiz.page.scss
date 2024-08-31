@@ -40,7 +40,7 @@ ion-grid {
   padding: 1rem;
   border: 1px solid transparent;
   border-radius: 15px;
-  background-color: #d7d4d8;
+  background-color: #fff;
 }
 
 ion-row {
@@ -59,13 +59,16 @@ ion-row {
 
 .quiz {
   display: flex;
-  width: 222px;
-  height: 33.3px;
   border: 1px solid transparent;
   border-radius: 8px;
   background-color: #4461f2;
   color: white;
   font-weight: 600;
+}
+
+h2 {
+  font-weight: bold;
+  color: #000;
 }
 
 ion-content {
@@ -83,11 +86,10 @@ ion-grid {
   padding: 1.5rem;
   border: 1px solid transparent;
   border-radius: 15px;
-  background-color: #d7d4d8;
+  background-color: #fff;
 }
 
 .titleQuiz {
-  display: flex;
   text-align: center;
   font-weight:bold;
   align-items: center;
@@ -111,4 +113,50 @@ ion-img{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+ion-col, ion-list,ion-item, ion-radio-group, ion-radio {
+  background-color: #fff;
+}
+
+ion-radio::part(container) {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+ion-radio::part(mark) {
+  background: none;
+  transition: none;
+  transform: none;
+  border-radius: 0;
+}
+
+ion-radio.radio-checked::part(container) {
+  background: #4461f2;
+  border-color: transparent;
+}
+
+ion-radio.radio-checked::part(mark) {
+  width: 6px;
+  height: 10px;
+
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  border-color: #fff;
+  
+
+  transform: rotate(45deg);
+}
+
+.justified-text {
+  text-align: justify;
+  color: #000
+}
+
+.left-aligned-list {
+  text-align: left; 
+  padding-left: 0; 
+  list-style-position: inside; 
+  color: #000
 }

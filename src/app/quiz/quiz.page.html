@@ -10,16 +10,36 @@
   <ion-grid>
     <ion-row>
       <ion-col class="titleQuiz">
-          <ion-title class="title" color="new">{{ typeTest }}</ion-title>
+          <ion-title class="title" color="new">{{ typeTestName }}</ion-title>
       </ion-col>
-      <ion-col class="titleQuiz">
-        <ion-list>
-          <ion-radio-group [compareWith]="compareWith" (ionChange)="handleChange($event)">
-            <ion-item *ngFor="let food of foods; trackBy: trackItems">
-              <ion-radio [value]="food" labelPlacement="stacked" alignment="start">{{ food.name }}</ion-radio>
-            </ion-item>
-          </ion-radio-group>
+    </ion-row>
+    <ion-row>
+      <ion-col class="titleQuiz" size="12" >
+        <ion-list *ngIf="!result">
+          <ion-item *ngFor="let question of questions; let i = index; trackBy: trackItems" lines="none">
+            <ion-label>
+              <h2>{{ question.question }}</h2>
+              <ion-radio-group [(ngModel)]="selectedAnswers[i]" (ionChange)="handleChange($event, i)">
+                <ion-list>
+                  <ion-item *ngFor="let option of getOptions(question.options)">
+                    <ion-radio [value]="option.value"></ion-radio>
+                    <ion-label>{{ option.label }}</ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-radio-group>
+            </ion-label>
+          </ion-item>
         </ion-list>
+        <ion-card *ngIf="result">
+          <ion-card-content>
+            <h2>Resultado Final</h2>
+            <p class="justified-text"[innerHTML]="result"></p>
+            <h2>Carreiras mais apropriadas:</h2>
+            <ul class="left-aligned-list">
+              <li *ngFor="let career of detailsResult">{{ career }}</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
     <ion-row>
