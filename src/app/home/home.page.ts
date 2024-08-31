@@ -10,6 +10,9 @@ export class HomePage {
   anonimous(){
     this.router.navigate(['/anonimous']);
   }
+  quiz(){
+    this.router.navigate(['/quiz']);
+  }
   login(){
     this.router.navigate(['/login'])
   }
