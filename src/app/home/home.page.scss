@@ -1,28 +1,55 @@
-#container {
+ion-content {
+  --background: linear-gradient(#eceae4, #e8eaf5);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header > .toolbarContent {
+  display: flex;
   text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  padding-top: 1rem;
+  --background: none;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.header > .toolbarContent > ion-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #325664;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-content {
+  padding: 1rem;
+  margin: 1rem;
 }
 
-#container a {
-  text-decoration: none;
+ion-title {
+  color: black;
+}
+
+ion-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: #d7d4d8;
+}
+
+ion-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: none;
 }
 
 .quizButtonContainer {
