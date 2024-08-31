@@ -1,39 +1,52 @@
+<ion-header class="ion-no-border header">
+  <ion-toolbar class="toolbarContent">
+    <ion-title color="new">EstudaQuiz</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-  <ion-header class="ion-no-border header">
-    <ion-toolbar class="toolbarContent">
-      <ion-title color="new">EstudaQuiz</ion-title>
-      <ion-buttons slot="start">
-        <ion-back-button default-href="#"></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <ion-title>Teste vocacional </ion-title>
-        <ion-button color="buttons" (click)="anonimous()">Iniciar quiz</ion-button>
+      <ion-col class="titleQuiz">
+          <ion-title class="title" color="new">Teste Vocacional</ion-title>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>
-        <ion-title>Teste de aprendizado </ion-title>
-        <ion-button color="buttons" (click)="anonimous()">Iniciar quiz</ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-title>Teste de inglês </ion-title>
-        <ion-button color="buttons" (click)="anonimous()">Iniciar quiz</ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-title>Teste atumalaca </ion-title>
-        <ion-button color="buttons" (click)="anonimous()">Iniciar quiz</ion-button>
+      <ion-col class="quizButtonContainer">
+        <ion-buttons>
+          <ion-button class="quiz" (click)="anonimous()">Iniciar Quiz</ion-button>
+        </ion-buttons>
       </ion-col>
     </ion-row>
   </ion-grid>
-
-
+  <ion-grid>
+    <ion-row>
+      <ion-col class="titleQuiz">
+          <ion-title class="title" color="new">Teste de Aprendizado</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="quizButtonContainer">
+        <ion-buttons>
+          <ion-button class="quiz" (click)="anonimous()">Iniciar Quiz</ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="titleQuiz">
+          <ion-title class="title" color="new">Teste de Inglês</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="quizButtonContainer">
+        <ion-buttons>
+          <ion-button class="quiz" (click)="anonimous()">Iniciar Quiz</ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
