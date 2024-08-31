@@ -10,8 +10,8 @@ export class HomePage {
   anonimous(){
     this.router.navigate(['/anonimous']);
   }
-  quiz(){
-    this.router.navigate(['/quiz']);
+  quiz(typeTest: string){
+    this.router.navigate(['/quiz'], { queryParams: { type: typeTest } });
   }
   login(){
     this.router.navigate(['/login'])
