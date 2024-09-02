@@ -91,12 +91,12 @@ ion-grid {
 
 .titleQuiz {
   text-align: center;
-  font-weight:bold;
+  font-weight: bold;
   align-items: center;
 }
 
 .title {
-font-weight: bold;
+  font-weight: bold;
 }
 
 ion-row {
@@ -108,14 +108,18 @@ ion-row {
   background-color: none;
 }
 
-ion-img{
+ion-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
-ion-col, ion-list,ion-item, ion-radio-group, ion-radio {
+ion-col,
+ion-list,
+ion-item,
+ion-radio-group,
+ion-radio {
   background-color: #fff;
 }
 
@@ -144,19 +148,18 @@ ion-radio.radio-checked::part(mark) {
   border-width: 0px 2px 2px 0px;
   border-style: solid;
   border-color: #fff;
-  
 
   transform: rotate(45deg);
 }
 
 .justified-text {
   text-align: justify;
-  color: #000
+  color: #000;
 }
 
 .left-aligned-list {
-  text-align: left; 
-  padding-left: 0; 
-  list-style-position: inside; 
-  color: #000
+  text-align: left;
+  padding-left: 0;
+  list-style-position: inside;
+  color: #000;
 }
