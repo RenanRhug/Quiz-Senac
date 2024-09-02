@@ -1,0 +1,187 @@
+{
+  "questions": [
+    {
+      "question": "Na escola, você prefere assuntos ligados a:",
+      "options": {
+        "a": "Arte, esportes e atividades extracurriculares",
+        "b": "Biologia e genética",
+        "c": "Ciências humanas, idiomas",
+        "d": "Ciências exatas"
+      }
+    },
+    {
+      "question": "Você prefere levar sua vida:",
+      "options": {
+        "a": "Com pouca rotina e poucas regras",
+        "b": "Com regras definidas e disciplina",
+        "c": "Interagindo com todo tipo de pessoa",
+        "d": "Com muita autonomia: 'na sua'"
+      }
+    },
+    {
+      "question": "Você se descreveria como uma pessoa:",
+      "options": {
+        "a": "Impulsiva e um tanto aventureira",
+        "b": "Cautelosa e responsável",
+        "c": "Entusiasmada e muito amiga",
+        "d": "Calma e diferente da maioria"
+      }
+    },
+    {
+      "question": "Você se considera uma pessoa:",
+      "options": {
+        "a": "Prática e hábil para improvisar",
+        "b": "Batalhadora, que sabe o que quer",
+        "c": "Preocupada com questões humanas",
+        "d": "Capacitada para criar e inventar"
+      }
+    },
+    {
+      "question": "De quais características suas você sente orgulho:",
+      "options": {
+        "a": "Audácia e facilidade para lidar com o inesperado",
+        "b": "Senso de dever e capacidade de dar exemplo",
+        "c": "Idealismo e disposição para compreender os outros",
+        "d": "Engenhosidade e rapidez mental"
+      }
+    },
+    {
+      "question": "Costuma confiar mais em:",
+      "options": {
+        "a": "Percepção imediata",
+        "b": "Costumes e tradições",
+        "c": "Intuição",
+        "d": "Razão e lógica"
+      }
+    },
+    {
+      "question": "Quase sempre, você gosta de:",
+      "options": {
+        "a": "Causar impacto: os 'holofotes' o atraem",
+        "b": "Ser visto como membro valioso de um grupo",
+        "c": "Sonhar em transformar o mundo",
+        "d": "Desvendar um enigma ou inventar algo útil"
+      }
+    },
+    {
+      "question": "A vida é mais interessante quando você tem:",
+      "options": {
+        "a": "Desafios, situações cambiantes",
+        "b": "Segurança, emprego garantido, integração social",
+        "c": "Possibilidade de fazer algo para mudar o mundo",
+        "d": "Possibilidade de ir além do que já é conhecido"
+      }
+    },
+    {
+      "question": "Você gostaria de ser:",
+      "options": {
+        "a": "Um craque na profissão que escolher",
+        "b": "Um executivo bem-sucedido",
+        "c": "Um profissional de prestígio",
+        "d": "Um especialista ou um cientista"
+      }
+    },
+    {
+      "question": "Você é muito bom lidando com:",
+      "options": {
+        "a": "Ferramentas, instrumentos e equipamentos",
+        "b": "Controle do tempo, comando e execução",
+        "c": "Pessoas de todos os níveis sociais e culturais",
+        "d": "Sistemas e construção (material ou mental)"
+      }
+    },
+    {
+      "question": "Antes de agir, você analisa:",
+      "options": {
+        "a": "As vantagens imediatas",
+        "b": "As experiências já vividas",
+        "c": "As possibilidades futuras",
+        "d": "As condições e consequências"
+      }
+    },
+    {
+      "question": "Gosta quando as pessoas:",
+      "options": {
+        "a": "O surpreendem com um presente",
+        "b": "Expressam gratidão por algo que fez",
+        "c": "Reconhecem sua personalidade singular",
+        "d": "Reconhecem sua inteligência"
+      }
+    },
+    {
+      "question": "Você costuma abraçar um novo projeto:",
+      "options": {
+        "a": "Com a cara e a coragem",
+        "b": "Guiado pela experiência",
+        "c": "Confiando na intuição e na criatividade",
+        "d": "Depois de verificar todas as variáveis"
+      }
+    },
+    {
+      "question": "Geralmente, você prefere agir:",
+      "options": {
+        "a": "No calor do momento",
+        "b": "Com segurança e conforme o costume",
+        "c": "Quando está inspirado",
+        "d": "Quando um problema o desafia"
+      }
+    },
+    {
+      "question": "Você fica motivado quando:",
+      "options": {
+        "a": "Tem a oportunidade de superar obstáculos",
+        "b": "Experimenta estabilidade na vida profissional, ou seja, sabe em que terreno está pisando",
+        "c": "Harmonia e inspiração guiam a atividade",
+        "d": "Há liberdade para projetar o futuro"
+      }
+    },
+    {
+      "question": "Em atividades em grupo, você prefere:",
+      "options": {
+        "a": "As desafiadoras, que exigem ação rápida",
+        "b": "Administrar os recursos disponíveis",
+        "c": "Motivar as pessoas para darem o melhor de si",
+        "d": "Descartar logo o que não funciona"
+      }
+    },
+    {
+      "question": "Liderar é uma atividade que gosta de exercer:",
+      "options": {
+        "a": "Por pouco tempo e dependendo da situação",
+        "b": "Quando pode comandar do começo ao fim",
+        "c": "Quando é preciso identificar e reunir talentos",
+        "d": "Quando o raciocínio estratégico é necessário"
+      }
+    },
+    {
+      "question": "Em uma escola, você gostaria de ser:",
+      "options": {
+        "a": "Professor de educação física",
+        "b": "Diretor",
+        "c": "Professor de literatura",
+        "d": "Professor de matemática ou física"
+      }
+    },
+    {
+      "question": "É um elogio quando se referem a você como:",
+      "options": {
+        "a": "Corajoso, otimista e divertido",
+        "b": "Cauteloso, responsável e aplicado",
+        "c": "Harmonizador, íntegro e sábio",
+        "d": "Uma mente brilhante"
+      }
+    },
+    {
+      "question": "Frase que têm a ver com você:",
+      "options": {
+        "a": "\"Deixo a vida me levar...\"",
+        "b": "\"Manda quem pode; obedece quem tem juízo\"",
+        "c": "\"Para seu próprio interesse, seja verdadeiro\"",
+        "d": "\"Penso, logo existo\""
+      }
+    }
+  ]
+}
+
+
+

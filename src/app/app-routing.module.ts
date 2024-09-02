@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'reset',
     loadChildren: () => import('./reset/reset.module').then( m => m.ResetPageModule)
   },
+  {
+    path: 'quiz',
+    loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
+  },
 ];
 
 @NgModule({

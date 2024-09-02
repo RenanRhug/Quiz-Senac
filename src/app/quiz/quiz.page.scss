@@ -1,0 +1,162 @@
+ion-content {
+  --background: linear-gradient(#eceae4, #e8eaf5);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header > .toolbarContent {
+  display: flex;
+  text-align: center;
+  padding-top: 1rem;
+  --background: none;
+}
+
+.header > .toolbarContent > ion-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #325664;
+}
+
+ion-content {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+ion-title {
+  color: black;
+}
+
+ion-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+ion-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: none;
+}
+
+.quizButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.quiz {
+  display: flex;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #4461f2;
+  color: white;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: bold;
+  color: #000;
+}
+
+ion-content {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+ion-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.titleQuiz {
+  text-align: center;
+  font-weight:bold;
+  align-items: center;
+}
+
+.title {
+font-weight: bold;
+}
+
+ion-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: none;
+}
+
+ion-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+ion-col, ion-list,ion-item, ion-radio-group, ion-radio {
+  background-color: #fff;
+}
+
+ion-radio::part(container) {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+ion-radio::part(mark) {
+  background: none;
+  transition: none;
+  transform: none;
+  border-radius: 0;
+}
+
+ion-radio.radio-checked::part(container) {
+  background: #4461f2;
+  border-color: transparent;
+}
+
+ion-radio.radio-checked::part(mark) {
+  width: 6px;
+  height: 10px;
+
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  border-color: #fff;
+  
+
+  transform: rotate(45deg);
+}
+
+.justified-text {
+  text-align: justify;
+  color: #000
+}
+
+.left-aligned-list {
+  text-align: left; 
+  padding-left: 0; 
+  list-style-position: inside; 
+  color: #000
+}

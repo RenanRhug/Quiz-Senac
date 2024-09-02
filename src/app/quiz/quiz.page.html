@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border header">
+  <ion-toolbar class="toolbarContent">
+    <ion-title color="new">EstudaQuiz</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="titleQuiz">
+          <ion-title class="title" color="new">{{ typeTestName }}</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="titleQuiz" size="12" >
+        <ion-list *ngIf="!result">
+          <ion-item *ngFor="let question of questions; let i = index; trackBy: trackItems" lines="none">
+            <ion-label>
+              <h2>{{ question.question }}</h2>
+              <ion-radio-group [(ngModel)]="selectedAnswers[i]" (ionChange)="handleChange($event, i)">
+                <ion-list>
+                  <ion-item *ngFor="let option of getOptions(question.options)">
+                    <ion-radio [value]="option.value"></ion-radio>
+                    <ion-label>{{ option.label }}</ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-radio-group>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-card *ngIf="result">
+          <ion-card-content>
+            <h2>Resultado Final</h2>
+            <p class="justified-text"[innerHTML]="result"></p>
+            <h2>Carreiras mais apropriadas:</h2>
+            <ul class="left-aligned-list">
+              <li *ngFor="let career of detailsResult">{{ career }}</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="quizButtonContainer">
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
