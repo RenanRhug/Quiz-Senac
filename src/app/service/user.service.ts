@@ -6,11 +6,10 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserService {
-  private storageKey = 'users'; // Chave para armazenar os usuários no localStorage
+  private storageKey = 'users'; 
 
   constructor() {}
 
-  // Método para criar um usuário
   createUser(user: { id: string; password: string }): Observable<any> {
     const users = this.getUsersFromStorage();
     users.push(user);
@@ -18,7 +17,6 @@ export class UserService {
     return of(user); // Simula a resposta da API
   }
 
-  // Método para obter a lista de usuários
   getUsers(): Observable<any[]> {
     return of(this.getUsersFromStorage());
   }
