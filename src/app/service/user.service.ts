@@ -1,33 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private storageKey = 'users'; 
+  private apiUrl = 'https://backendquiz-epqi.onrender.com/users'; // URL do backend
 
-  constructor() {}
+  constructor(private http: HttpClient) { }
 
-  createUser(user: { id: string; password: string }): Observable<any> {
-    const users = this.getUsersFromStorage();
-    users.push(user);
-    this.saveUsersToStorage(users);
-    return of(user); // Simula a resposta da API
+  createUser(user: { name: string; email: string; password: string }): Observable<any> {
+    return this.http.post<any>(this.apiUrl, user).pipe(
+      tap(() => console.log('Usuário criado')),
+      catchError(this.handleError<any>('createUser'))
+    );
   }
 
-  getUsers(): Observable<any[]> {
-    return of(this.getUsersFromStorage());
-  }
-
-  private getUsersFromStorage(): { id: string; password: string }[] {
-    const users = localStorage.getItem(this.storageKey);
-    return users ? JSON.parse(users) : [];
-  }
-
-  private saveUsersToStorage(users: { id: string; password: string }[]): void {
-    localStorage.setItem(this.storageKey, JSON.stringify(users));
+  getUsers(): Observable<any> {
+    return this.http.get<any>(this.apiUrl).pipe(
+      tap(() => console.log('Usuários carregados')),
+      catchError(this.handleError<any>('getUsers', []))
+    );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

@@ -1,20 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../service/login.service'; // Importe o AuthService
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
-  dataA: { id: string; password: string }[] = [];
+export class LoginPage {
 
-  constructor(private router: Router, private http: HttpClient) {}
-
-  ngOnInit() {
-    this.loadUserData();
-  }
+  constructor(private router: Router, private authService: AuthService) {}
 
   forgotPassword() {
     this.router.navigate(['/forgot']);
@@ -28,32 +23,29 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/create']);
   }
 
-  async login(nome: string): Promise<void> {
-    alert('Seja bem-vindo ' + nome + '!');
+  async login(email: string): Promise<void> {
+    alert('Seja bem-vindo ' + email + '!');
     this.router.navigate(['/home']);
   }
 
   async logon(event: Event): Promise<void> {
     event.preventDefault();
 
-    const id = (document.getElementById('id') as HTMLInputElement)?.value;
+    const email = (document.getElementById('email') as HTMLInputElement)?.value;
     const password = (document.getElementById('password') as HTMLInputElement)?.value;
 
-    if (!id || !password) {
-      alert('Por favor, insira um ID e uma senha.');
+    if (!email || !password) {
+      alert('Por favor, insira um email e uma senha.');
       return;
     }
 
-    localStorage.setItem('currentUser', id);
-
-    for (const user of this.dataA) {
-      if (id === user.id && password === user.password) {
-        await this.login(id);
-        return;
-      }
+    try {
+      const response = await this.authService.login(email, password).toPromise();
+      localStorage.setItem('currentUser', email);
+      await this.login(email);
+    } catch (error) {
+      alert('Seu login e/ou senha não estão corretos.\nTente novamente.');
     }
-
-    alert('Seu login e/ou senha não estão corretos.\nTente novamente.');
   }
 
   logout(): void {
@@ -63,17 +55,5 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/home']);
       localStorage.removeItem('currentUser');
     }
-  }
-
-  private loadUserData(): void {
-    this.http.get<{ users: { id: string; password: string }[] }>('assets/login.json')
-      .subscribe(
-        data => {
-          this.dataA = data.users;
-        },
-        error => {
-          console.error('Error loading user data:', error);
-        }
-      );
   }
 }
