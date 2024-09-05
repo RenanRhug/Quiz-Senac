@@ -9,7 +9,8 @@ import { UserService } from '../service/user.service';
   styleUrls: ['./create.page.scss'],
 })
 export class CreatePage implements OnInit {
-  id: string = '';
+  name: string = '';
+  email: string = '';
   password: string = '';
 
   constructor(private router: Router, private userService: UserService) {}
@@ -17,8 +18,8 @@ export class CreatePage implements OnInit {
   ngOnInit() {}
 
   create() {
-    if (this.id && this.password) {
-      this.userService.createUser({ id: this.id, password: this.password })
+    if (this.name && this.email && this.password) {
+      this.userService.createUser({ name: this.name, email: this.email, password: this.password })
         .subscribe({
           next: () => {
             alert("Conta criada com sucesso");
