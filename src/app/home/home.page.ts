@@ -6,16 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  menuType: string = 'overlay';
   constructor(private router: Router) {}
-  anonimous(){
+  anonimous() {
     this.router.navigate(['/anonimous']);
   }
-  quiz(typeTest: string){
+  quiz(typeTest: string) {
     this.router.navigate(['/quiz'], { queryParams: { type: typeTest } });
   }
-  login(){
-    this.router.navigate(['/login'])
+  login() {
+    this.router.navigate(['/login']);
   }
 }
-
-

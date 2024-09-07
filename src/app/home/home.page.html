@@ -1,16 +1,34 @@
+<ion-menu contentId="main-content">
+  <ion-header class="ion-no-border header">
+    <ion-toolbar class="toolbarContent">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <!-- COLOCAR ALGO AQUI DENTRO
+     Ex:
+     perfil
+     quizes
+     resultado vocacional
+     site oficial do senac
+     etc. -->
+  </ion-content>
+</ion-menu>
+
 <ion-header class="ion-no-border header">
   <ion-toolbar class="toolbarContent">
-    <ion-title color="new">EstudaQuiz</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button default-href="#"></ion-back-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title color="new">EstudaQuiz</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+
+<ion-content id="main-content">
   <ion-grid>
     <ion-row>
       <ion-col class="titleQuiz">
-          <ion-title class="title" color="new">Teste Vocacional</ion-title>
+        <ion-title class="title" color="new">Teste Vocacional</ion-title>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -24,7 +42,7 @@
   <ion-grid>
     <ion-row>
       <ion-col class="titleQuiz">
-          <ion-title class="title" color="new">Teste de Aprendizado</ion-title>
+        <ion-title class="title" color="new">Teste de Aprendizado</ion-title>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -38,7 +56,7 @@
   <ion-grid>
     <ion-row>
       <ion-col class="titleQuiz">
-          <ion-title class="title" color="new">Teste de Inglês</ion-title>
+        <ion-title class="title" color="new">Teste de Inglês</ion-title>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -49,4 +67,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
 </ion-content>

@@ -2,10 +2,10 @@
   <ion-header class="ion-no-border header">
     <ion-toolbar class="toolbarContent">
       <ion-title color="new">Criar conta</ion-title>
-        <ion-buttons slot="start">
-          <ion-back-button default-href="#"></ion-back-button>
-        </ion-buttons>
-    
+      <ion-buttons slot="start">
+        <ion-back-button default-href="#"></ion-back-button>
+      </ion-buttons>
+
     </ion-toolbar>
   </ion-header>
   <ion-grid>
@@ -18,7 +18,7 @@
     <ion-row>
       <ion-col class="inputCreate" size="12" size-lg="3">
         <ion-icon name="person-circle-outline"></ion-icon>
-        <ion-input [(ngModel)]="email" placeholder="Usuário"></ion-input>
+        <ion-input [(ngModel)]="email" placeholder="Email"></ion-input>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -40,7 +40,7 @@
     <ion-row>
       <ion-col class="CreateButtonContainer">
         <ion-buttons>
-          <ion-button class="create" (click)="create()">Entrar</ion-button>
+          <ion-button class="create" (click)="create()">Criar conta</ion-button>
         </ion-buttons>
 
       </ion-col>

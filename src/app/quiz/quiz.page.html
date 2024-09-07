@@ -6,15 +6,16 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
   <ion-grid>
     <ion-row>
       <ion-col class="titleQuiz">
-          <ion-title class="title" color="new">{{ typeTestName }}</ion-title>
+        <ion-title class="title" color="new">{{ typeTestName }}</ion-title>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col class="titleQuiz" size="12" >
+      <ion-col class="titleQuiz" size="12">
         <ion-list *ngIf="!result">
           <ion-item *ngFor="let question of questions; let i = index; trackBy: trackItems" lines="none">
             <ion-label>
@@ -33,7 +34,7 @@
         <ion-card *ngIf="result">
           <ion-card-content>
             <h2>Resultado Final</h2>
-            <p class="justified-text"[innerHTML]="result"></p>
+            <p class="justified-text" [innerHTML]="result"></p>
             <h2>Carreiras mais apropriadas:</h2>
             <ul class="left-aligned-list">
               <li *ngFor="let career of detailsResult">{{ career }}</li>
@@ -44,7 +45,7 @@
     </ion-row>
     <ion-row>
       <ion-col class="quizButtonContainer">
-        
+
       </ion-col>
     </ion-row>
   </ion-grid>
