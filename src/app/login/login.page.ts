@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../service/login.service'; // Importe o AuthService
+import { AuthService } from '../service/login.service'; 
+import { UserService } from '../service/user.service'; 
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,9 @@ import { AuthService } from '../service/login.service'; // Importe o AuthService
 })
 export class LoginPage {
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router, 
+    private authService: AuthService,
+    private userService: UserService) {}
 
   forgotPassword() {
     this.router.navigate(['/forgot']);
@@ -41,19 +44,16 @@ export class LoginPage {
 
     try {
       const response = await this.authService.login(email, password).toPromise();
-      localStorage.setItem('currentUser', email);
-      await this.login(email);
+      const token = response.token;
+      if (token) {
+        this.authService.storeToken(token);
+        localStorage.setItem('currentUser', email);
+        await this.login(email);
+      }  else {
+        console.error('Token não encontrado na resposta');
+      }
     } catch (error) {
       alert('Seu login e/ou senha não estão corretos.\nTente novamente.');
-    }
-  }
-
-  logout(): void {
-    const currentUser = localStorage.getItem('currentUser');
-    if (currentUser) {
-      alert('Você saiu, ' + currentUser);
-      this.router.navigate(['/home']);
-      localStorage.removeItem('currentUser');
     }
   }
 }

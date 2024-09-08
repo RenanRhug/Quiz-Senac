@@ -16,6 +16,9 @@ export class QuizService {
     learning: 'assets/learning.json'
   };
 
+  private apiUrl = 'https://backendquiz-epqi.onrender.com'; // URL do backend
+  // private apiUrl = 'http://localhost:3000'
+  
   constructor(private http: HttpClient) {}
 
   getQuestions(typeTest: string): Observable<any> {
@@ -27,6 +30,16 @@ export class QuizService {
     );
   }
 
+  saveVocationalResult(userId: number, maxOption: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/test/save-vocational-result`, { user_id: userId, result: maxOption });
+  }
+
+  getVocationalResult(userId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/test/get-vocational-result`, {
+      params: { user_id: userId.toString() }
+    });
+  }
+  
   private isValidTestType(type: string): type is TestType {
     return ['vocational', 'english', 'learning'].includes(type);
   }
