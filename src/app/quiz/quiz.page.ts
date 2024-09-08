@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { QuizService } from '../service/quiz.service';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-home',
@@ -14,10 +15,12 @@ export class Quiz implements OnInit {
   selectedAnswers: string[] = [];
   result: string = '';
   detailsResult: any[] = [];
+  answer: string | undefined;
 
   constructor(
     private route: ActivatedRoute,
-    private quizService: QuizService
+    private quizService: QuizService,
+    private userService: UserService
   ) {}
 
   compareWith(o1: any, o2: any) {
@@ -46,17 +49,21 @@ export class Quiz implements OnInit {
   }
 
   calculateResult() {
-    const counts: { [key: string]: number } = this.selectedAnswers.reduce(
-      (acc, answer) => {
-        acc[answer] = (acc[answer] || 0) + 1;
-        return acc;
-      },
-      {} as { [key: string]: number }
-    );
+    let maxOption = this.answer;
 
-    const maxOption = Object.keys(counts).reduce((a, b) =>
-      counts[a] > counts[b] ? a : b
-    );
+    if (!maxOption) {
+      const counts: { [key: string]: number } = this.selectedAnswers.reduce(
+        (acc, answer) => {
+          acc[answer] = (acc[answer] || 0) + 1;
+          return acc;
+        },
+        {} as { [key: string]: number }
+      );
+
+      maxOption = Object.keys(counts).reduce((a, b) =>
+        counts[a] > counts[b] ? a : b
+      );
+    }
 
     switch (maxOption) {
       case 'a':
@@ -108,7 +115,7 @@ export class Quiz implements OnInit {
         break;
       case 'c':
         this.result =
-          '<strong>Maior pontuação em: c)</strong><br><br>Facilmente reconhecíveis por seu entusiasmo e interesse nas relações humanas, as pessoas desta opção têm na intuição o seu ponto forte. Muitas  endereçam seu esforço e talento para o desenvolvimento intelectual de alunos e discípulos e o conforto psicológicos de pacientes e colegas de trabalho. No grupo desta opção, estão as personalidades mais contempladas com o Nobel da Paz e de literatura.';
+          '<strong>Maior pontuação em: c)</strong><br><br>Facilmente reconhecíveis por seu entusiasmo e interesse nas relações humanas, as pessoas desta opção têm na intuição o seu ponto forte. Muitas endereçam seu esforço e talento para o desenvolvimento intelectual de alunos e discípulos e o conforto psicológicos de pacientes e colegas de trabalho. No grupo desta opção, estão as personalidades mais contempladas com o Nobel da Paz e de literatura.';
         this.detailsResult = [
           'Artista plástico',
           'Dramaturgo',
@@ -153,8 +160,37 @@ export class Quiz implements OnInit {
         this.result = 'Não foi possível determinar a pontuação.';
     }
 
-    console.log(this.result);
+    const userId = this.userService.getUserIdFromToken();
+
+    if (userId !== null && !this.answer) {
+      this.saveResult(userId, maxOption);
+    } else {
+      console.error('User ID not found. Cannot save result.');
+    }
   }
+
+  saveResult(userId: number, maxOption: string) {
+    this.quizService.saveVocationalResult(userId, maxOption)
+      .subscribe(
+        () => alert('Resultado salvo com sucesso!'),
+        error => console.error('Erro ao salvar o resultado:', error)
+      );
+  }
+
+  getVocationalResult(userId: number) {
+    this.quizService.getVocationalResult(userId)
+      .subscribe(
+        result => {
+          if (result.length > 0) {
+            this.answer = result[0].answer;
+            this. calculateResult()
+          }
+        },
+        error => {
+          console.error('Erro ao obter o resultado:', error);
+        }
+      );
+  }  
 
   ngOnInit() {
     this.route.queryParams.subscribe((params: Params) => {
@@ -173,5 +209,12 @@ export class Quiz implements OnInit {
       this.questions = data.questions;
       this.selectedAnswers = new Array(this.questions.length).fill(null);
     });
+
+    const userId = this.userService.getUserIdFromToken();
+      if (userId !== null) {
+        this.getVocationalResult(userId);
+      } else {
+        console.error('User ID not found. Cannot get vocational result.');
+      }
   }
 }
