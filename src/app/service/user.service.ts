@@ -3,15 +3,15 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { jwtDecode } from 'jwt-decode';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class UserService {
-  private apiUrl = 'https://backendquiz-epqi.onrender.com'; // URL do backend
-  // private apiUrl = 'http://localhost:3000'
-  
+  private apiUrl = environment.apiUrl
+
   constructor(private http: HttpClient) { }
 
   createUser(user: { name: string; email: string; password: string }): Observable<any> {
