@@ -5,41 +5,49 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col class="inputLogin" size="12" size-lg="3">
-        <ion-icon name="person-circle-outline"></ion-icon>
-        <ion-input id="email" placeholder="Email"></ion-input>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col class="inputLogin" size="12" size-lg="3">
-        <ion-icon name="lock-open-outline"></ion-icon>
-        <ion-input id="password" type="password" placeholder="Senha">
-          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-        </ion-input>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-buttons>
-        <ion-col class="createOrForgot">
-          <ion-button color="background" class="create" (click)="create()">Criar conta</ion-button>
+  <div class="form-container" [class.loading-active]="isLoading">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="inputLogin" size="12" size-lg="3">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-input id="email" placeholder="Email"></ion-input>
         </ion-col>
-        <ion-col>
-          <ion-button color="background" class="forgot" href="/forgot">Esqueceu a senha?</ion-button>
-        </ion-col>
-      </ion-buttons>
-    </ion-row>
+      </ion-row>
 
-    <ion-row>
-      <ion-col class="loginButtonContainer">
+      <ion-row>
+        <ion-col class="inputLogin" size="12" size-lg="3">
+          <ion-icon name="lock-open-outline"></ion-icon>
+          <ion-input id="password" type="password" placeholder="Senha">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
         <ion-buttons>
-          <ion-button class="login" (click)="logon($event)">Entrar</ion-button>
+          <ion-col class="createOrForgot">
+            <ion-button color="background" class="create" (click)="create()">Criar conta</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button color="background" class="forgot" href="/forgot">Esqueceu a senha?</ion-button>
+          </ion-col>
         </ion-buttons>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <ion-img src="assets/image.png"></ion-img>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="loginButtonContainer">
+          <ion-buttons>
+            <ion-button class="login" (click)="logon($event)">Entrar</ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-img src="assets/image.png"></ion-img>
+
+    <!-- Overlay de carregamento -->
+    <div class="loading-overlay" *ngIf="isLoading">
+      <ion-spinner></ion-spinner>
+      <p>Carregando...</p>
+    </div>
+  </div>
 </ion-content>

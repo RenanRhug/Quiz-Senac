@@ -8,16 +8,18 @@ import { AuthService } from '../../service/login.service';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent  implements OnInit {
+  user = localStorage.getItem('currentUserName');
 
   constructor(private router: Router, 
     private authService: AuthService,) { }
 
   logout(): void {
-    const currentUser = localStorage.getItem('currentUser');
-    if (currentUser) {
-      alert('Você saiu, ' + currentUser);
+    if (this.user) {
+      alert('Você saiu, ' + this.user);
       this.router.navigate(['/login']);
       localStorage.removeItem('currentUser');
+      localStorage.removeItem('currentUserName');
+
       this.authService.storeToken('');
     }
   }
