@@ -1,5 +1,6 @@
 ion-content {
   --background: linear-gradient(#eceae4, #e8eaf5);
+  position: relative;
 }
 
 .header {
@@ -51,14 +52,8 @@ ion-content {
   justify-content: space-around;
 }
 
-ion-content {
-  padding: 1rem;
-  margin: 1rem;
-}
-
 a {
   text-decoration: none;
-  // color: black;
 }
 
 ion-grid {
@@ -67,7 +62,6 @@ ion-grid {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 1rem;
   padding: 1.5rem;
   border: 1px solid transparent;
   border-radius: 15px;
@@ -91,11 +85,29 @@ ion-row {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: none;
 }
+
 ion-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.loading-overlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1000; 
+  backdrop-filter: blur(5px); 
+}
+
+.loading-active ion-content {
+  filter: blur(3px); 
 }
