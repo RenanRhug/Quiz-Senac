@@ -9,6 +9,7 @@ import { AuthService } from '../../service/login.service';
 })
 export class MenuComponent  implements OnInit {
   user = localStorage.getItem('currentUserName');
+  darkMode = false;
 
   constructor(private router: Router, 
     private authService: AuthService,) { }
@@ -26,4 +27,7 @@ export class MenuComponent  implements OnInit {
 
   ngOnInit() {}
 
+  toggleDarkMode(){
+    console.log('funcionando')
+  }
 }
