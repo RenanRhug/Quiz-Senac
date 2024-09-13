@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 // Definir um tipo para as chaves válidas
 type TestType = 'vocational' | 'english' | 'learning';
@@ -16,9 +17,8 @@ export class QuizService {
     learning: 'assets/learning.json'
   };
 
-  private apiUrl = 'https://backendquiz-epqi.onrender.com'; // URL do backend
-  // private apiUrl = 'http://localhost:3000'
-  
+  private apiUrl = environment.apiUrl
+
   constructor(private http: HttpClient) {}
 
   getQuestions(typeTest: string): Observable<any> {
