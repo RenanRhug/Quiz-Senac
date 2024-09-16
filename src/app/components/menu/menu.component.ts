@@ -27,7 +27,5 @@ export class MenuComponent  implements OnInit {
 
   ngOnInit() {}
 
-  toggleDarkMode(){
-    console.log('funcionando')
-  }
+ 
 }

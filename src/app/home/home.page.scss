@@ -3,7 +3,7 @@ ion-menu::part(backdrop) {
 }
 
 ion-content {
-  --background: linear-gradient(#eceae4, #e8eaf5);
+  --background: var(--main-bg);
   padding: 1rem;
   margin: 1rem;
 }
@@ -40,7 +40,7 @@ ion-grid {
   padding: 1rem;
   border: 1px solid transparent;
   border-radius: 15px;
-  background-color: #d7d4d8;
+  --background: var(--main-bg);
 }
 
 ion-row {
@@ -98,3 +98,4 @@ ion-img {
   margin-right: auto;
   width: 50%;
 }
+

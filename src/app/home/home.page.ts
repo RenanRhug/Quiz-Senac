@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ThemeService } from '../shared/services/theme.service'
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
   menuType: string = 'overlay';
-  constructor(private router: Router) {}
+  constructor(private router: Router, private themeService: ThemeService) {}
   anonimous() {
     this.router.navigate(['/anonimous']);
   }
@@ -16,5 +18,8 @@ export class HomePage {
   }
   login() {
     this.router.navigate(['/login']);
+  }
+  SwitchTheme(){
+    this.themeService.mode = !this.themeService.mode;
   }
 }
