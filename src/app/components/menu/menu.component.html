@@ -1,12 +1,16 @@
 <ion-menu contentId="main-content">
   <ion-header class="ion-no-border header">
     <ion-toolbar class="toolbarContent">
-      <ion-title>Olá, {{ user }}</ion-title>
+      <ion-title class="menuContent">Olá, {{ user }}</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
     <ion-buttons>
-      <ion-button (click)="logout()">Sair</ion-button>
+      <ion-button class="menuContent" (click)="logout()">Sair</ion-button>
     </ion-buttons>
+    <ion-item>
+      <ion-icon name="moon-outline"></ion-icon>
+      <ion-toggle (click)="SwitchTheme()" (click)="SwitchMenuColors()"></ion-toggle>
+    </ion-item>
   </ion-content>
 </ion-menu>
