@@ -17,6 +17,9 @@ export class MenuComponent implements OnInit {
     private authService: AuthService,
     private themeService: ThemeService
   ) {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   logout(): void {
     if (this.user) {
@@ -46,5 +49,4 @@ export class MenuComponent implements OnInit {
       }
     }
   }
-  ngOnInit() {}
 }
