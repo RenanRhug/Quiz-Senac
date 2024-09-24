@@ -33,14 +33,18 @@ export class MenuComponent implements OnInit {
   }
 
   SwitchMenuColors() {
-    this.themeService.mode = !this.themeService.mode;
+
+    // this.themeService.mode = !this.themeService.mode;
   
-    const toggleElement = document.getElementById('theme-toggle') as HTMLIonToggleElement;
-    const toggleValue = toggleElement.checked; 
+     const toggleElement = document.getElementById('theme-toggle') as HTMLIonToggleElement;
+     const toggleValue = toggleElement.checked; 
   
-    const elements = document.getElementsByClassName('menuContent');
-    for (let i = 0; i < elements.length; i++) {
-      (elements[i] as HTMLElement).style.setProperty('color', toggleValue ? 'black' : 'white');
-    }
+    // const elements = document.getElementsByClassName('menuContent');
+    // for (let i = 0; i < elements.length; i++) {
+    //   (elements[i] as HTMLElement).style.setProperty('color', toggleValue ? 'black' : 'white');
+    // }
+
+    document.documentElement.classList.toggle('ion-palette-dark', toggleValue);
+
   }
 }
