@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ThemeService } from '../shared/services/theme.service'
+import { ThemeService } from '../services/theme.service'
 
 @Component({
   selector: 'app-home',

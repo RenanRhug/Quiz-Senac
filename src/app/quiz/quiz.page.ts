@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { QuizService } from '../service/quiz.service';
-import { UserService } from '../service/user.service';
+import { QuizService } from '../services/quiz.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-home',
