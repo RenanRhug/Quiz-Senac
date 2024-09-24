@@ -1,9 +1,25 @@
-*{
-  --background: var(--main-bg);
+/* Definindo variáveis CSS para cores e estilos */
+:root {
+  --background-light: linear-gradient(#eceae4, #e8eaf5);
+  --background-dark: linear-gradient(#121212, #1e1e1e);
+  --text-light: black;
+  --text-dark: #ffffff;
+  --grid-background-light: #fff;
+  --grid-background-dark: #333;
+  --radio-checked-light: #4461f2;
+  --radio-checked-dark: #448aff;
+  --radio-mark-light: #fff;
+  --radio-mark-dark: #000;
 }
 
 ion-content {
-  --background: linear-gradient(#eceae4, #e8eaf5);
+  --background: var(--background-light);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+body.dark-mode ion-content {
+  --background: var(--background-dark);
 }
 
 .header {
@@ -22,16 +38,11 @@ ion-content {
 .header > .toolbarContent > ion-title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #325664;
-}
-
-ion-content {
-  padding: 1rem;
-  margin: 1rem;
+  color: var(--text-light);
 }
 
 ion-title {
-  color: black;
+  color: var(--text-light);
 }
 
 ion-grid {
@@ -40,11 +51,15 @@ ion-grid {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 0.5rem;
-  padding: 1rem;
+  margin: 1rem;
+  padding: 1.5rem;
   border: 1px solid transparent;
   border-radius: 15px;
-  background-color: #fff;
+  background-color: var(--grid-background-light);
+}
+
+body.dark-mode ion-grid {
+  background-color: var(--grid-background-dark);
 }
 
 ion-row {
@@ -65,32 +80,14 @@ ion-row {
   display: flex;
   border: 1px solid transparent;
   border-radius: 8px;
-  background-color: #4461f2;
+  background-color: var(--radio-checked-light);
   color: white;
   font-weight: 600;
 }
 
 h2 {
   font-weight: bold;
-  color: #000;
-}
-
-ion-content {
-  padding: 1rem;
-  margin: 1rem;
-}
-
-ion-grid {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 1rem;
-  padding: 1.5rem;
-  border: 1px solid transparent;
-  border-radius: 15px;
-  background-color: #fff;
+  color: var(--text-light);
 }
 
 .titleQuiz {
@@ -101,15 +98,6 @@ ion-grid {
 
 .title {
   font-weight: bold;
-}
-
-ion-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: none;
 }
 
 ion-img {
@@ -124,13 +112,43 @@ ion-list,
 ion-item,
 ion-radio-group,
 ion-radio {
-  background-color: #fff;
+  background-color: var(--grid-background-light);
+  margin: 0; /* Remover margens */
+  padding: 0; /* Remover preenchimento */
+}
+
+/* Ajuste específico para ion-radio */
+ion-radio {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+body.dark-mode ion-col,
+body.dark-mode ion-list,
+body.dark-mode ion-item,
+body.dark-mode ion-radio-group,
+body.dark-mode ion-radio {
+  background-color: var(--grid-background-dark);
+}
+
+.label-text-wrapper {
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove preenchimento, se necessário */
+}
+
+/* Se há uma classe específica para ocultar o texto da etiqueta */
+.label-text-wrapper-hidden {
+  margin: 0 !important; /* Força a remoção da margem */
+  padding: 0 !important; /* Força a remoção do preenchimento */
 }
 
 ion-radio::part(container) {
   width: 30px;
   height: 30px;
   border-radius: 8px;
+  margin: 0 !important; /* Remover margem específica */
 }
 
 ion-radio::part(mark) {
@@ -141,29 +159,35 @@ ion-radio::part(mark) {
 }
 
 ion-radio.radio-checked::part(container) {
-  background: #4461f2;
+  background: var(--radio-checked-light);
   border-color: transparent;
+}
+
+body.dark-mode ion-radio.radio-checked::part(container) {
+  background: var(--radio-checked-dark);
 }
 
 ion-radio.radio-checked::part(mark) {
   width: 6px;
   height: 10px;
-
   border-width: 0px 2px 2px 0px;
   border-style: solid;
-  border-color: #fff;
-
+  border-color: var(--radio-mark-light);
   transform: rotate(45deg);
+}
+
+body.dark-mode ion-radio.radio-checked::part(mark) {
+  border-color: var(--radio-mark-dark);
 }
 
 .justified-text {
   text-align: justify;
-  color: #000;
+  color: var(--text-light);
 }
 
 .left-aligned-list {
   text-align: left;
   padding-left: 0;
   list-style-position: inside;
-  color: #000;
+  color: var(--text-light);
 }

@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
 
 export function tokenGetter() {
-  return localStorage.getItem('authToken'); // Função que retorna o token armazenado
+  return localStorage.getItem('authToken'); 
 }
 
 @NgModule({
@@ -26,8 +26,8 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ['http://localhost:4200'], // Substitua pelo seu domínio
-        disallowedRoutes: ['http://localhost:4200/login'] // Rotas que não devem ter o token anexado
+        allowedDomains: ['http://localhost:4200'], 
+        disallowedRoutes: ['http://localhost:4200/login'] 
       }
     })
   ],

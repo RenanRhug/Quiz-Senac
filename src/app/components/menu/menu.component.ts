@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../service/login.service';
-import { ThemeService } from '../../shared/services/theme.service';
+import { AuthService } from '../../services/login.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-menu',
@@ -31,22 +31,16 @@ export class MenuComponent implements OnInit {
       this.authService.storeToken('');
     }
   }
-  SwitchTheme() {
-    this.themeService.mode = !this.themeService.mode;
-  }
+
   SwitchMenuColors() {
-    // desafio do dia hein... faz essa gambiarra aqui em 2 linhas (sem ajuda)
+    this.themeService.mode = !this.themeService.mode;
+  
+    const toggleElement = document.getElementById('theme-toggle') as HTMLIonToggleElement;
+    const toggleValue = toggleElement.checked; 
+  
     const elements = document.getElementsByClassName('menuContent');
-    if (this.themeService.mode) {
-      for (let i = 0; i < elements.length; i++) {
-        const element = elements[i] as HTMLElement;
-        element.style.setProperty('color', 'black');
-      }
-    } else {
-      for (let i = 0; i < elements.length; i++) {
-        const element = elements[i] as HTMLElement;
-        element.style.setProperty('color', 'white');
-      }
+    for (let i = 0; i < elements.length; i++) {
+      (elements[i] as HTMLElement).style.setProperty('color', toggleValue ? 'black' : 'white');
     }
   }
 }

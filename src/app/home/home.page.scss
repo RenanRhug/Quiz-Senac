@@ -1,5 +1,5 @@
 ion-menu::part(backdrop) {
-  background-color: black;
+  background-color: var(--ion-background-color);
 }
 
 ion-content {
@@ -27,7 +27,7 @@ ion-content {
 }
 
 ion-title {
-  color: black;
+  color: var(--ion-text-color);
 }
 
 ion-grid {

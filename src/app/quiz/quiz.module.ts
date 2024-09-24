@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { Quiz } from './quiz.page';
 import { QuizRoutingModule } from './quiz-routing.module';
-import { QuizService } from '../service/quiz.service'; // Certifique-se de que o caminho está correto
+import { QuizService } from '../services/quiz.service'; // Certifique-se de que o caminho está correto
 import { HttpClientModule } from '@angular/common/http'; // Certifique-se de importar
 
 @NgModule({
