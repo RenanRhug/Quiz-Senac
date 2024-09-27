@@ -14,7 +14,7 @@
   <ion-content class="ion-padding">
     <ion-item>
       <ion-icon class="menuContent" id="theme-icon" name="moon-outline"></ion-icon>
-      <ion-toggle class="custom-spacing" id="theme-toggle" (click)="SwitchMenuColors()"></ion-toggle>
+      <ion-toggle [(ngModel)]="isDarkMode" (ionChange)="SwitchMenuColors(isDarkMode)"></ion-toggle>
     </ion-item>    
   </ion-content>
 </ion-menu>

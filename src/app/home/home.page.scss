@@ -6,6 +6,14 @@ ion-content {
   padding: 1rem;
   margin: 1rem;
 }
+// :host {
+//   ion-content {
+//     @media (prefers-color-scheme: light) {
+//       --ion-background-color: #f0f0f0 !important; /* Cor de fundo para light mode */
+//       --ion-text-color: #000 !important; /* Cor de texto para light mode */
+//     }
+//   }
+// }
 
 .header {
   display: flex;
@@ -39,7 +47,7 @@ ion-grid {
   padding: 1rem;
   border: 1px solid transparent;
   border-radius: 15px;
-  --background: var(--main-bg);
+  --background: var(--ion-color-light-shade);
 }
 
 ion-row {
@@ -48,7 +56,7 @@ ion-row {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: none;
+  // background-color: none;
 }
 
 .quizButtonContainer {
