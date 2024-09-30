@@ -10,45 +10,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content id="main-content">
-  <ion-grid>
+<ion-content *ngIf="subjects.length > 0" id="main-content">
+  <ion-grid *ngFor="let subject of subjects">
     <ion-row>
       <ion-col class="titleQuiz">
-        <ion-title class="title" color="new">Teste Vocacional</ion-title>
+        <ion-title class="title" color="new">{{ subject.nome_materia }}</ion-title>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="quizButtonContainer">
         <ion-buttons>
-          <ion-button class="quiz" (click)="quiz('vocational')">Iniciar Quiz</ion-button>
-        </ion-buttons>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row>
-      <ion-col class="titleQuiz">
-        <ion-title class="title" color="new">Teste de Aprendizado</ion-title>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="quizButtonContainer">
-        <ion-buttons>
-          <ion-button class="quiz" (click)="quiz('learning')">Iniciar Quiz</ion-button>
-        </ion-buttons>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row>
-      <ion-col class="titleQuiz">
-        <ion-title class="title" color="new">Teste de Inglês</ion-title>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="quizButtonContainer">
-        <ion-buttons>
-          <ion-button class="quiz" (click)="quiz('english')">Iniciar Quiz</ion-button>
+          <ion-button class="quiz" (click)="quiz(subject.materia)">Iniciar Quiz</ion-button>
         </ion-buttons>
       </ion-col>
     </ion-row>

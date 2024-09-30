@@ -22,7 +22,7 @@ export class QuizService {
   constructor(private http: HttpClient) {}
 
   getQuestions(typeTest: string): Observable<any> {
-    const testType = this.isValidTestType(typeTest) ? typeTest as TestType : 'vocational'; // Use a default value or handle error as needed
+    const testType = this.isValidTestType(typeTest) ? typeTest as TestType : 'vocational'; 
     const url = this.jsonUrls[testType];
     
     return this.http.get<any>(url).pipe(
@@ -30,8 +30,16 @@ export class QuizService {
     );
   }
 
+  saveAnswers(answers: any[]): Promise<any> {
+    return this.http.post(this.apiUrl, { answers }).toPromise();
+  }
+
   saveVocationalResult(userId: number, maxOption: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/test/save-vocational-result`, { user_id: userId, result: maxOption });
+  }
+
+  getTestTypes(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/test/test-types`);
   }
 
   getVocationalResult(userId: number): Observable<any> {
