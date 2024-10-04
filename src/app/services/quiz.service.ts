@@ -22,13 +22,7 @@ export class QuizService {
   constructor(private http: HttpClient) {}
 
   getQuestions(typeTest: string): Observable<any> {
-<<<<<<< Updated upstream
     const testType = this.isValidTestType(typeTest) ? typeTest as TestType : 'vocational'; 
-=======
-    const testType = this.isValidTestType(typeTest)
-      ? (typeTest as TestType)
-      : 'vocational'; // Use a default value or handle error as needed
->>>>>>> Stashed changes
     const url = this.jsonUrls[testType];
 
     return this.http.get<any>(url).pipe(catchError(this.handleError));
