@@ -1,143 +1,163 @@
 {
   "questions": [
     {
-      "question": "1. Qual situação é mais natural que aconteça com você? ",
+      "question": "1. Qual situação é mais natural que aconteça com você?",
       "options": {
-        "a": "Estava escrevendo uma redação e acabei ficando desconfortável ao ver que uma linha do caderno estava apagada por algum erro de impressão.",
-        "b": "Estava escrevendo uma redação e acabei me distraindo ao desmontar a lapiseira inteira só para ver como era por dentro e depois fiquei pensando na vida..."
+        "a": "Estava escrevendo uma redação e fiquei desconfortável ao ver que uma linha do caderno estava apagada por erro de impressão.",
+        "b": "Estava escrevendo uma redação e me distraí desmontando a lapiseira para ver como era por dentro.",
+        "c": "Estava escrevendo uma redação e comecei a cantarolar uma música que estava na minha cabeça."
       }
     },
     {
-      "question": "2. Qual é o seu sentimento sobre a seguinte frase: Eu pretendia ler um livro durante o fim de semana, mas tive que dar mais atenção à minha família do que eu esperava e não consegui ler muito.",
+      "question": "2. Qual é o seu sentimento sobre a seguinte frase: 'Eu pretendia ler um livro durante o fim de semana, mas tive que dar mais atenção à minha família do que eu esperava e não consegui ler muito.'",
       "options": {
         "a": "Que pena que deixei de ler o livro que eu queria.",
-        "b": "Nem lembrava mais que ia ler um livro."
+        "b": "Nem lembrava mais que ia ler um livro, aproveitei para passar um tempo agradável com minha família.",
+        "c": "Senti falta da atividade de pegar o livro e folhear suas páginas."
       }
     },
     {
-      "question": "3. Você está na rua e descobre que ganhou milhões na loteria. O que você faria nos primeiros minutos?",
+      "question": "3. Você está na rua e descobre que ganhou milhões na loteria. O que faria nos primeiros minutos?",
       "options": {
-        "a": "Gritaria baixo, daria socos no ar e iria discretamente pra casa para conferir e fazer planos.",
-        "b": "Gritaria alto, ligaria pra família e sairia dando abraços. Logo depois conversaria com amigos sobre tudo que iria fazer impulsivamente."
+        "a": "Gritaria baixo, daria socos no ar e iria discretamente para casa para conferir e fazer planos.",
+        "b": "Imaginaria todas as coisas que poderia comprar e como seria minha nova vida.",
+        "c": "Ligaria para a família para contar a novidade e compartilhar minha felicidade."
       }
     },
     {
       "question": "4. Você se considera uma pessoa:",
       "options": {
-        "a": "Prática e hábil para improvisar",
-        "b": "Batalhadora, que sabe o que quer"
+        "a": "Prática e hábil para improvisar.",
+        "b": "Capaz de visualizar objetivos e traçar planos detalhados.",
+        "c": "Comunicativa, que gosta de discutir ideias e ouvir os outros."
       }
     },
     {
       "question": "5. Você é mais interessado em ler ou ouvir que tipo de história?",
       "options": {
-        "a": "Gosto de histórias com personagens humanos, e que mostra situações reais ou que podem acontecer na vida real.",
-        "b": "Gosto de histórias baseadas em situações fantasiosas, com personagens que fazem coisas impossíveis na vida real."
+        "a": "Gosto de histórias com personagens humanos, que mostram situações reais ou que podem acontecer na vida real.",
+        "b": "Gosto de ouvir histórias contadas em voz alta, principalmente se tiverem humor.",
+        "c": "Gosto de histórias que envolvem aventuras e ações, onde consigo imaginar as atividades acontecendo."
       }
     },
     {
       "question": "6. Costuma confiar mais em:",
       "options": {
-        "a": "Percepção imediata",
-        "b": "Costumes e tradições"
+        "a": "Percepção imediata e o que vejo.",
+        "b": "O que ouço das pessoas e seus relatos.",
+        "c": "Minhas sensações e impressões físicas."
       }
     },
     {
       "question": "7. Como você costuma agir na hora de falar?",
       "options": {
-        "a": "Penso calado para falar depois.",
-        "b": "Falar me ajuda a pensar, então eu penso enquanto falo."
+        "a": "Penso calado e imagino o que vou dizer antes de falar.",
+        "b": "Falar me ajuda a pensar, então eu penso enquanto falo.",
+        "c": "Gesticulo muito enquanto falo e tento expressar meus pensamentos com ações."
       }
     },
     {
       "question": "8. Ao conhecer pessoas novas da sua idade, como você se comporta?",
       "options": {
-        "a": "Escuto mais do que falo.",
-        "b": "Falo mais do que escuto."
+        "a": "Observo atentamente suas expressões e como se vestem.",
+        "b": "Escuto mais do que falo.",
+        "c": "Cumprimento com apertos de mão ou abraços."
       }
     },
     {
       "question": "9. O seguinte é normal de acontecer comigo:",
       "options": {
         "a": "Enfatizar justiça em vez de emoção, mesmo que machuque alguém.",
-        "b": "Confiar fortemente nas pessoas, a troco de correr o risco de ser trapaceado ou que tentem tirar vantagem da minha confiança."
+        "b": "Confiar fortemente nas pessoas, correndo o risco de ser enganado.",
+        "c": "Agir rapidamente baseado no que sinto no momento."
       }
     },
     {
       "question": "10. O que atrai mais a sua atenção?",
       "options": {
         "a": "Fatos, informações e histórias reais.",
-        "b": "Instinto, imaginação e fantasia."
+        "b": "Conversas interessantes e discussões profundas.",
+        "c": "Ação, movimento e atividades práticas."
       }
     },
     {
       "question": "11. Que valor é mais importante para você (sim, é uma escolha difícil)?",
       "options": {
-        "a": "Justiça.",
-        "b": "Compaixão."
+        "a": "Justiça, sempre buscando equilíbrio e o que é certo.",
+        "b": "Compaixão, ouvindo e entendendo os sentimentos dos outros.",
+        "c": "Ação concreta para ajudar quem precisa."
       }
     },
     {
-      "question": "12. Se você tiver que jogar apenas um jogo para passar o tempo, qual você escolheria?",
+      "question": "12. Se você tiver que jogar apenas um jogo para passar o tempo, qual escolheria?",
       "options": {
-        "a": "Caça palavras: um jogo onde procuramos palavras escondidas em letras embaralhadas, para pessoas que gostam de investigar.",
-        "b": "Lego: um jogo onde empilhamos blocos para montar algo, para pessoas que gostam de criar."
+        "a": "Quebra-cabeça, onde consigo ver a imagem se formando.",
+        "b": "Jogo de perguntas e respostas, onde posso ouvir e responder questões interessantes.",
+        "c": "Jogo de tabuleiro que envolve movimentos e ações físicas."
       }
     },
     {
       "question": "13. Como você gerencia o seu tempo?",
       "options": {
-        "a": "Gosto de seguir uma sequência que planejei anteriormente. Acho ruim ter que mudar o planejamento no meio do caminho.",
-        "b": "Faço as minhas atividades de acordo com a primeira coisa que eu lembrar. Posso mudar o meu plano no meio do caminho sem problemas."
+        "a": "Gosto de visualizar um planejamento sequencial e seguir o plano.",
+        "b": "Faço minhas atividades enquanto as lembro, geralmente seguindo sugestões de outras pessoas.",
+        "c": "Prefiro uma abordagem flexível, ajustando conforme sinto necessidade."
       }
     },
     {
-      "question": "14. Qual é o jeito que você costuma fazer para descobrir se uma pessoa é confiável?",
+      "question": "14. Qual é o jeito que você costuma usar para descobrir se uma pessoa é confiável?",
       "options": {
-        "a": "Olhar bem fundo nos olhos da pessoa enquanto você conversa com ela. Acredito que sinto quando a pessoa está mentindo.",
-        "b": "Investigar e ouvir o que falam sobre essa pessoa."
+        "a": "Observar atentamente suas expressões faciais e postura.",
+        "b": "Ouvir o que as pessoas dizem sobre ela.",
+        "c": "Sentir sua energia e como me sinto em sua presença."
       }
     },
     {
       "question": "15. Como é para você conversar com muitas pessoas ao mesmo tempo?",
       "options": {
-        "a": "Nem vejo o tempo passar quando começo uma conversa interessante, frequentemente preciso ser interrompido para que outras pessoas também falem.",
-        "b": "Posso gostar da conversa, mas em conversas longas e com muitas pessoas eu faço mais papel de ouvinte do que de falante."
+        "a": "Gosto de observar as reações de cada pessoa na conversa.",
+        "b": "Aproveito para escutar diferentes opiniões e pontos de vista.",
+        "c": "Gosto de participar ativamente, gesticulando e me movendo."
       }
     },
     {
       "question": "16. Em qual das duas profissões você seria melhor?",
       "options": {
-        "a": "Médico pediatra, pois sinto que consigo harmonizar a relação dos pais com os filhos e entendo como uma criança pequena pensa.",
-        "b": "Médico cirurgião, pois posso entender como seguir as regras detalhadas de uma cirurgia e consigo manter a calma para falar com os parentes que podem estar aflitos."
+        "a": "Designer gráfico, criando imagens e visuais.",
+        "b": "Professor, falando e explicando conceitos para outras pessoas.",
+        "c": "Personal trainer, ajudando as pessoas através de atividades físicas."
       }
     },
     {
       "question": "17. Qual comentário parece mais que estão falando sobre você?",
       "options": {
-        "a": "Quando eu te conheci, nem dei muita atenção. Porém, depois de algumas semanas, fui percebendo que você é super agradável para conversar. Nem todos percebem isso, mas tive a sorte de ser uma dessas pessoas.",
-        "b": "O seu jeito natural e expontâneo de ser passa uma agradável energia para todos ao seu redor. Cresci como pessoa bastando ficar ao seu lado, muito obrigado!"
+        "a": "Você tem uma ótima capacidade de observar e compreender as coisas ao seu redor.",
+        "b": "Seu jeito de falar faz com que as pessoas se sintam ouvidas e acolhidas.",
+        "c": "Você tem uma energia incrível, sempre pronto para agir."
       }
     },
     {
       "question": "18. O que você acha sobre o costume de escrever listas de tarefas?",
       "options": {
-        "a": "Usei poucas vezes ou nenhuma. Servem apenas como lembrete para quando temos muitas coisas urgentes a fazer. Normalmente eu faço várias coisas ao mesmo tempo e mudo de tarefa de acordo com o que eu acho que é mais importante no momento.",
-        "b": "Listas de tarefas são de grande ajuda para mim. Seguir uma sequência na realização das tarefas é mais fácil do que fazer o que for lembrando."
+        "a": "Gosto de visualizar minhas tarefas e marcar cada uma conforme realizo.",
+        "b": "Gosto de falar em voz alta sobre as tarefas que tenho que fazer, me ajuda a lembrar.",
+        "c": "Prefiro fazer as coisas conforme sinto necessidade, sem seguir uma lista."
       }
     },
     {
       "question": "19. Que tipo de trabalho traria mais satisfação para você fazer por toda a sua vida?",
       "options": {
-        "a": "Um trabalho onde os resultados podem ser vistos diariamente, onde sou especialista e sei exatamente o que fazer todos os dias.",
-        "b": "Um trabalho onde eu posso projetar idéias novas e experimentá-las, podendo assim expressar a minha criatividade."
+        "a": "Um trabalho onde posso criar e ver resultados visíveis todos os dias.",
+        "b": "Um trabalho onde posso conversar com pessoas e trocar ideias constantemente.",
+        "c": "Um trabalho onde posso usar minhas habilidades físicas e estar em movimento."
       }
     },
     {
       "question": "20. O que você deseja mais em relação às outras pessoas?",
       "options": {
-        "a": "Que as pessoas sejam mais pontuais e desmarquem menos compromissos.",
-        "b": "Que as pessoas sejam mais tolerantes com imprevistos e mudanças de planos."
+        "a": "Que as pessoas sejam mais organizadas e sigam planos visíveis.",
+        "b": "Que as pessoas sejam mais abertas e dispostas a conversar.",
+        "c": "Que as pessoas sejam mais dispostas a agir e ajudar quando necessário."
       }
     }
   ]

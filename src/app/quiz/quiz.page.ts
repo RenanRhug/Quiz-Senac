@@ -65,99 +65,146 @@ export class Quiz implements OnInit {
       );
     }
 
-    switch (maxOption) {
-      case 'a':
-        this.result =
-          '<strong>Maior pontuação em: a)</strong><br><br>A principal característica dos relacionados com a opção a), é o movimento; gostam de novidade. Apresentam destreza física e boa expressão corporal. Se forem mais propensos ao raciocínio lógico, terão mais êxito em profissões que requeiram precisão e acuidade. Se forem mais inclinados ao sentimento e à emoção, as profissões relacionadas ao trato com pessoas são as mais indicadas. Pessoas assim, não gostam de rotina e veem o trabalho como uma grande fonte de prazer.';
-        this.detailsResult = [
-          'Esportista',
-          'Anestesista',
-          'Artista Plástico',
-          'Ator',
-          'Chef de Cozinha',
-          'Cineasta',
-          'Cirurgião',
-          'Coreógrafo',
-          'Dançarino',
-          'Dermatologista',
-          'Estilista',
-          'Fotógrafo',
-          'Guia de Turismo',
-          'Instrumentador Cirúrgico',
-          'Instrutor de Vôo',
-          'Jornalista',
-          'Médico Clínico',
-          'Músico',
-          'Paisagista',
-          'Personal Trainner',
-          'Personal Stylistic',
-          'Piloto',
-          'Publicitário',
-          'Relações Públicas',
-          'Roteirista',
-        ];
-        break;
-      case 'b':
-        this.result =
-          '<strong>Maior pontuação em: b)</strong><br><br>Comando e responsabilidade são duas palavras que definem as pessoas desta opção. Elas gostam de lidar com fatos, quantidades, análises, organização e planejamento. Trabalham duro e preferem profissões que lhes proporcionem status e possibilidade de crescimento. São as mais presentes no mundo corporativo.';
-        this.detailsResult = [
-          'Administrador de Empresas',
-          'Advogado',
-          'Assistente Social',
-          'Bibliotecário',
-          'Delegado',
-          'Engenheiro Mecânico/Químico',
-          'Juiz de Direito',
-          'Pastor, Padre, Rabino',
-          'Policial',
-          'Promotor Público',
-        ];
-        break;
-      case 'c':
-        this.result =
-          '<strong>Maior pontuação em: c)</strong><br><br>Facilmente reconhecíveis por seu entusiasmo e interesse nas relações humanas, as pessoas desta opção têm na intuição o seu ponto forte. Muitas endereçam seu esforço e talento para o desenvolvimento intelectual de alunos e discípulos e o conforto psicológicos de pacientes e colegas de trabalho. No grupo desta opção, estão as personalidades mais contempladas com o Nobel da Paz e de literatura.';
-        this.detailsResult = [
-          'Artista plástico',
-          'Dramaturgo',
-          'Educador',
-          'Escritor',
-          'Filósofo',
-          'Jornalista',
-          'Pedagogo',
-          'Professor',
-          'Psicólogo',
-          'Psiquiatra',
-          'Sociólogo',
-          'Terapeuta ocupacional',
-          'Tradutor',
-        ];
-        break;
-      case 'd':
-        this.result =
-          '<strong>Maior pontuação em: d)</strong><br><br>São intuitivos como os da opção anterior, mas, em vez de se preocupar com pessoas, costumam focar seus interesses em grandes áreas do conhecimento, como ciência e tecnologia. Apresentam notável capacidade para identificar problemas concretos e resolvê-los, bem como para o raciocínio abstrato.';
-        this.detailsResult = [
-          'Analista de Sistemas',
-          'Antropólogo',
-          'Arquiteto',
-          'Astrônomo',
-          'Criador de Software',
-          'Designer Industrial',
-          'Economista',
-          'Engenheiro',
-          'Físico',
-          'Líder de uma Corporação',
-          'Matemático',
-          'Militar',
-          'Músico (Regente)',
-          'Oceanógrafo',
-          'Pesquisador',
-          'Químico',
-          'Urbanista',
-          'Zoólogo',
-        ];
-        break;
-      default:
-        this.result = 'Não foi possível determinar a pontuação.';
+    if (this.typeTest == 'vocational') {
+      switch (maxOption) {
+        case 'a':
+          this.result =
+            '<strong>Maior pontuação em: a)</strong><br><br>A principal característica dos relacionados com a opção a), é o movimento; gostam de novidade. Apresentam destreza física e boa expressão corporal. Se forem mais propensos ao raciocínio lógico, terão mais êxito em profissões que requeiram precisão e acuidade. Se forem mais inclinados ao sentimento e à emoção, as profissões relacionadas ao trato com pessoas são as mais indicadas. Pessoas assim, não gostam de rotina e veem o trabalho como uma grande fonte de prazer.';
+          this.detailsResult = [
+            'Carreiras mais apropriadas:',
+            'Esportista',
+            'Anestesista',
+            'Artista Plástico',
+            'Ator',
+            'Chef de Cozinha',
+            'Cineasta',
+            'Cirurgião',
+            'Coreógrafo',
+            'Dançarino',
+            'Dermatologista',
+            'Estilista',
+            'Fotógrafo',
+            'Guia de Turismo',
+            'Instrumentador Cirúrgico',
+            'Instrutor de Vôo',
+            'Jornalista',
+            'Médico Clínico',
+            'Músico',
+            'Paisagista',
+            'Personal Trainner',
+            'Personal Stylistic',
+            'Piloto',
+            'Publicitário',
+            'Relações Públicas',
+            'Roteirista',
+          ];
+          break;
+        case 'b':
+          this.result =
+            '<strong>Maior pontuação em: b)</strong><br><br>Comando e responsabilidade são duas palavras que definem as pessoas desta opção. Elas gostam de lidar com fatos, quantidades, análises, organização e planejamento. Trabalham duro e preferem profissões que lhes proporcionem status e possibilidade de crescimento. São as mais presentes no mundo corporativo.';
+          this.detailsResult = [
+            'Carreiras mais apropriadas:',
+            'Administrador de Empresas',
+            'Advogado',
+            'Assistente Social',
+            'Bibliotecário',
+            'Delegado',
+            'Engenheiro Mecânico/Químico',
+            'Juiz de Direito',
+            'Pastor, Padre, Rabino',
+            'Policial',
+            'Promotor Público',
+          ];
+          break;
+        case 'c':
+          this.result =
+            '<strong>Maior pontuação em: c)</strong><br><br>Facilmente reconhecíveis por seu entusiasmo e interesse nas relações humanas, as pessoas desta opção têm na intuição o seu ponto forte. Muitas endereçam seu esforço e talento para o desenvolvimento intelectual de alunos e discípulos e o conforto psicológicos de pacientes e colegas de trabalho. No grupo desta opção, estão as personalidades mais contempladas com o Nobel da Paz e de literatura.';
+          this.detailsResult = [
+            'Carreiras mais apropriadas:',
+            'Artista plástico',
+            'Dramaturgo',
+            'Educador',
+            'Escritor',
+            'Filósofo',
+            'Jornalista',
+            'Pedagogo',
+            'Professor',
+            'Psicólogo',
+            'Psiquiatra',
+            'Sociólogo',
+            'Terapeuta ocupacional',
+            'Tradutor',
+          ];
+          break;
+        case 'd':
+          this.result =
+            '<strong>Maior pontuação em: d)</strong><br><br>São intuitivos como os da opção anterior, mas, em vez de se preocupar com pessoas, costumam focar seus interesses em grandes áreas do conhecimento, como ciência e tecnologia. Apresentam notável capacidade para identificar problemas concretos e resolvê-los, bem como para o raciocínio abstrato.';
+          this.detailsResult = [
+            'Carreiras mais apropriadas:',
+            'Analista de Sistemas',
+            'Antropólogo',
+            'Arquiteto',
+            'Astrônomo',
+            'Criador de Software',
+            'Designer Industrial',
+            'Economista',
+            'Engenheiro',
+            'Físico',
+            'Líder de uma Corporação',
+            'Matemático',
+            'Militar',
+            'Músico (Regente)',
+            'Oceanógrafo',
+            'Pesquisador',
+            'Químico',
+            'Urbanista',
+            'Zoólogo',
+          ];
+          break;
+        default:
+          this.result = 'Não foi possível determinar um resultado.';
+      }
+    } else if (this.typeTest == 'learning') {
+      switch (maxOption) {
+        case 'a':
+          this.result =
+            '<strong>Maior pontuação em: a)</strong><br><br> Você parece aprender melhor quando a informação é apresentada de forma gráfica, como em mapas mentais, diagramas, gráficos, vídeos, etc.';
+          this.detailsResult = ['Estilo de aprendizagem: Visual'];
+          break;
+        case 'b':
+          this.result =
+            '<strong>Maior pontuação em: b)</strong><br><br> Você parece aprender melhor quando a informação é apresentada de forma prática, como em experimentos, simulações, jogos, etc.';
+          this.detailsResult = ['Estilo de aprendizagem: Cinestésico'];
+          break;
+        case 'c':
+          this.result =
+            '<strong>Maior pontuação em: c)</strong><br><br> Você parece aprender melhor quando a informação é apresentada de forma oral, como em palestras, podcasts, músicas, etc.';
+          this.detailsResult = ['Estilo de aprendizagem: Auditivo.'];
+          break;
+        default:
+          this.result = 'Não foi possível determinar um resultado.';
+      }
+    } else if (this.typeTest == 'english') {
+      switch (maxOption) {
+        case 'a':
+          this.result = '';
+          this.detailsResult = [''];
+          break;
+        case 'b':
+          this.result = '';
+          this.detailsResult = [''];
+          break;
+        case 'c':
+          this.result = '';
+          this.detailsResult = [''];
+          break;
+        case 'd':
+          this.result = '';
+          this.detailsResult = [''];
+          break;
+        default:
+          this.result = 'Não foi possível determinar um resultado.';
+      }
     }
 
     const userId = this.userService.getUserIdFromToken();
@@ -170,27 +217,25 @@ export class Quiz implements OnInit {
   }
 
   saveResult(userId: number, maxOption: string) {
-    this.quizService.saveVocationalResult(userId, maxOption)
-      .subscribe(
-        () => alert('Resultado salvo com sucesso!'),
-        error => console.error('Erro ao salvar o resultado:', error)
-      );
+    this.quizService.saveVocationalResult(userId, maxOption).subscribe(
+      () => alert('Resultado salvo com sucesso!'),
+      (error) => console.error('Erro ao salvar o resultado:', error)
+    );
   }
 
   getVocationalResult(userId: number) {
-    this.quizService.getVocationalResult(userId)
-      .subscribe(
-        result => {
-          if (result.length > 0) {
-            this.answer = result[0].answer;
-            this. calculateResult()
-          }
-        },
-        error => {
-          console.error('Erro ao obter o resultado:', error);
+    this.quizService.getVocationalResult(userId).subscribe(
+      (result) => {
+        if (result.length > 0) {
+          this.answer = result[0].answer;
+          this.calculateResult();
         }
-      );
-  }  
+      },
+      (error) => {
+        console.error('Erro ao obter o resultado:', error);
+      }
+    );
+  }
 
   ngOnInit() {
     this.route.queryParams.subscribe((params: Params) => {
@@ -211,10 +256,10 @@ export class Quiz implements OnInit {
     });
 
     const userId = this.userService.getUserIdFromToken();
-      if (userId !== null) {
-        this.getVocationalResult(userId);
-      } else {
-        console.error('User ID not found. Cannot get vocational result.');
-      }
+    if (userId !== null) {
+      this.getVocationalResult(userId);
+    } else {
+      console.error('User ID not found. Cannot get vocational result.');
+    }
   }
 }
