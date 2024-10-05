@@ -1,27 +1,30 @@
 <app-menu></app-menu>
-<ion-header class="ion-no-border header">
-  <ion-toolbar class="toolbarContent">
-    <ion-buttons slot="start">
-      <ion-menu-button><img src="../../assets/icon/image.png" class="perfilPic" alt="foto de perfil"></ion-menu-button>
-      <ion-icon name="chevron-forward-outline"></ion-icon>
-    </ion-buttons>
-    <ion-title color="new">EstudaQuiz</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border header">
+    <ion-toolbar class="toolbarContent">
+      <ion-buttons slot="start">
+        <ion-menu-button><img src="../../assets/icon/image.png" class="perfilPic"
+            alt="foto de perfil"></ion-menu-button>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title color="new">EstudaQuiz</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content *ngIf="subjects.length > 0" id="main-content">
-  <ion-grid *ngFor="let subject of subjects">
-    <ion-row>
-      <ion-col class="titleQuiz">
-        <ion-title class="title" color="new">{{ subject.nomeMateria }}</ion-title>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="quizButtonContainer">
-        <ion-buttons>
-          <ion-button class="quiz" (click)="quiz(subject.materia)">Iniciar Quiz</ion-button>
-        </ion-buttons>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+  <ion-content *ngIf="subjects.length > 0" id="main-content">
+    <ion-grid *ngFor="let subject of subjects">
+      <ion-row>
+        <ion-col class="titleQuiz">
+          <ion-title class="title" color="new">{{ subject.nomeMateria }}</ion-title>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="quizButtonContainer">
+          <ion-buttons>
+            <ion-button class="quiz" (click)="quiz(subject.materia)">Iniciar Quiz</ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</div>

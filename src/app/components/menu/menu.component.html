@@ -6,7 +6,7 @@
         <ion-button class="menuContent" (click)="logout()" size="small">
           Sair
           <ion-icon slot="end" name="log-out-outline"></ion-icon>
-        </ion-button>      
+        </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
@@ -15,6 +15,6 @@
     <ion-item>
       <ion-icon class="menuContent" id="theme-icon" name="moon-outline"></ion-icon>
       <ion-toggle [(ngModel)]="isDarkMode" (ionChange)="SwitchMenuColors(isDarkMode)"></ion-toggle>
-    </ion-item>    
+    </ion-item>
   </ion-content>
 </ion-menu>
